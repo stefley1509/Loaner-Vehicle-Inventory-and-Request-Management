@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_ui_policy_action">
+    <sys_ui_policy_action action="INSERT_OR_UPDATE">
+        <cleared>false</cleared>
+        <disabled>ignore</disabled>
+        <field>assigned_to</field>
+        <mandatory>true</mandatory>
+        <sys_class_name>sys_ui_policy_action</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2023-09-23 05:36:46</sys_created_on>
+        <sys_id>138a61402fa57510e56b41e72799b61e</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>assigned_to</sys_name>
+        <sys_package display_value="Loaner Vehicle Request and Inventory" source="x_780003_lva">01ebf3ee2f113110e56b41e72799b624</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Loaner Vehicle Request and Inventory">01ebf3ee2f113110e56b41e72799b624</sys_scope>
+        <sys_update_name>sys_ui_policy_action_138a61402fa57510e56b41e72799b61e</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2023-09-23 05:36:46</sys_updated_on>
+        <table>x_780003_lva_vehicle_tracker</table>
+        <ui_policy display_value="Mandatory">4e492d482f617510e56b41e72799b6e7</ui_policy>
+        <visible>ignore</visible>
+    </sys_ui_policy_action>
+</record_update>

@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update>
+    <sys_ui_form_sections form_id="5c7841be2f193110e56b41e72799b685" sys_domain="global" table="x_780003_lva_loaner_vehicle_catalog" version="3">
+        <sys_ui_form_section action="INSERT_OR_UPDATE">
+            <position>0</position>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2023-09-19 05:54:49</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_id>207841be2f193110e56b41e72799b689</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_overrides/>
+            <sys_ui_form display_value="x_780003_lva_loaner_vehicle_catalog" name="x_780003_lva_loaner_vehicle_catalog" sys_domain="global" view="Default view">5c7841be2f193110e56b41e72799b685</sys_ui_form>
+            <sys_ui_section caption="NULL" display_value="" name="x_780003_lva_loaner_vehicle_catalog" sys_domain="global" view="Default view">21138df62fd53110e56b41e72799b6df</sys_ui_section>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2023-09-19 05:54:49</sys_updated_on>
+        </sys_ui_form_section>
+        <sys_ui_form action="INSERT_OR_UPDATE">
+            <name>x_780003_lva_loaner_vehicle_catalog</name>
+            <roles/>
+            <sys_class_name>sys_ui_form</sys_class_name>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2023-09-19 05:54:49</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_id>5c7841be2f193110e56b41e72799b685</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_name>x_780003_lva_loaner_vehicle_catalog</sys_name>
+            <sys_overrides/>
+            <sys_package display_value="Loaner Vehicle Request and Inventory" source="x_780003_lva">01ebf3ee2f113110e56b41e72799b624</sys_package>
+            <sys_policy/>
+            <sys_scope display_value="Loaner Vehicle Request and Inventory">01ebf3ee2f113110e56b41e72799b624</sys_scope>
+            <sys_update_name>sys_ui_form_sections_5c7841be2f193110e56b41e72799b685</sys_update_name>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2023-09-19 05:54:49</sys_updated_on>
+            <sys_user/>
+            <view display_value="Default view" name="NULL">Default view</view>
+            <view_name/>
+        </sys_ui_form>
+    </sys_ui_form_sections>
+</record_update>

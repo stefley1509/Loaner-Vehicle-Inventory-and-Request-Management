@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update sys_domain="global" table="sys_script">
+    <sys_script action="INSERT_OR_UPDATE">
+        <abort_action>false</abort_action>
+        <access>package_private</access>
+        <action_delete>false</action_delete>
+        <action_insert>true</action_insert>
+        <action_query>false</action_query>
+        <action_update>true</action_update>
+        <active>true</active>
+        <add_message>false</add_message>
+        <advanced>true</advanced>
+        <change_fields>false</change_fields>
+        <client_callable>false</client_callable>
+        <collection>x_780003_lva_vehicle_tracker</collection>
+        <condition/>
+        <description/>
+        <execute_function>false</execute_function>
+        <filter_condition table="x_780003_lva_vehicle_tracker">vehicle_statusCHANGESTOsent for servicing^EQ<item display_value="Sent for Servicing" endquery="false" field="vehicle_status" goto="false" newquery="false" operator="CHANGESTO" or="false" value="sent for servicing"/>
+            <item endquery="true" field="" goto="false" newquery="false" operator="=" or="false" value=""/>
+        </filter_condition>
+        <is_rest>false</is_rest>
+        <message/>
+        <name>Create Servicing Ticket</name>
+        <order>200</order>
+        <priority>100</priority>
+        <rest_method/>
+        <rest_method_text/>
+        <rest_service/>
+        <rest_service_text/>
+        <rest_variables/>
+        <role_conditions/>
+        <script><![CDATA[(function executeRule(current, previous /*null when async*/) {
+// This is a ServiceNow business rule. It's executed when certain conditions are met.
+
+//Search for existing ticket associated with the current tracker record that is open.
+	var vehService = new GlideRecord('x_780003_lva_vehicle_servicing');
+	// Create a GlideRecord object to query the 'x_780003_lva_vehicle_servicing' table.
+	vehService.addQuery('vehicle_tracker', current.sys_id);
+	//Add a query condition to find records where 'vehicle_tracker' matches the current record's sys_id.
+	vehService.addQuery('tracker_status', 'open');
+	// Add another query condition to find records with 'tracker_status' set to 'open'.
+	vehService.query();
+	// Execute the query.
+
+	if (!vehService.next()) {
+		// If no matching record was found in the previous query:
+
+		// Create a new ticket record.
+		var createticket = new GlideRecord('x_780003_lva_vehicle_servicing');
+		// Create a new GlideRecord object for the 'x_780003_lva_vehicle_servicing' table.
+
+		// Get the current date to set as the service ticket's opening date.
+		var gd = new GlideDate();
+
+		// Populate required fields for the new ticket.
+		createticket.initialize();
+		//Initialize the new record.
+		createticket.setValue('vehicle_tracker', current.sys_id);
+		// Set the 'vehicle_tracker' field with the current record's sys_id.
+		createticket.setValue('vehicle', current.vehicle);
+		// Set the 'vehicle' field with the current record's 'vehicle' value.
+		createticket.setValue('vehicle_status', 'in service');
+		// Set the 'vehicle_status' field to 'in service'.
+		createticket.setValue('date_sent_for_servicing', gd.getValue());
+		// Set the 'date_sent_for_servicing' field to the current date.
+		createticket.setValue('ticket_status', 'open');
+		// Set the 'ticket_status' field to 'open'.
+
+		createticket.insert();
+		// Insert the new ticket record into the table.
+	}
+})(current, previous);		]]></script>
+        <sys_class_name>sys_script</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2023-11-10 02:18:44</sys_created_on>
+        <sys_domain>global</sys_domain>
+        <sys_domain_path>/</sys_domain_path>
+        <sys_id>ffd084e32fd23110e56b41e72799b6a2</sys_id>
+        <sys_mod_count>9</sys_mod_count>
+        <sys_name>Create Servicing Ticket</sys_name>
+        <sys_overrides/>
+        <sys_package display_value="Loaner Vehicle Request and Inventory" source="x_780003_lva">01ebf3ee2f113110e56b41e72799b624</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Loaner Vehicle Request and Inventory">01ebf3ee2f113110e56b41e72799b624</sys_scope>
+        <sys_update_name>sys_script_ffd084e32fd23110e56b41e72799b6a2</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2023-12-28 04:07:10</sys_updated_on>
+        <template/>
+        <when>after</when>
+    </sys_script>
+    <sys_translated_text action="delete_multiple" query="documentkey=ffd084e32fd23110e56b41e72799b6a2"/>
+</record_update>

@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update sys_domain="global" table="sys_app_module">
+    <sys_app_module action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <application/>
+        <assessment/>
+        <device_type/>
+        <filter/>
+        <hint/>
+        <homepage/>
+        <image/>
+        <link_type>LIST</link_type>
+        <map_page/>
+        <mobile_title>Vehicle Servicings</mobile_title>
+        <mobile_view_name>Mobile</mobile_view_name>
+        <name>x_780003_lva_vehicle_servicing</name>
+        <order/>
+        <override_menu_roles>false</override_menu_roles>
+        <query/>
+        <report/>
+        <roles>x_780003_lva.lva_user</roles>
+        <sys_class_name>sys_app_module</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2023-09-21 06:04:17</sys_created_on>
+        <sys_domain>global</sys_domain>
+        <sys_domain_path>/</sys_domain_path>
+        <sys_id>3ecd131f2fddb110e56b41e72799b6b6</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>Vehicle Servicings</sys_name>
+        <sys_overrides/>
+        <sys_package display_value="Loaner Vehicle Request and Inventory" source="x_780003_lva">01ebf3ee2f113110e56b41e72799b624</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Loaner Vehicle Request and Inventory">01ebf3ee2f113110e56b41e72799b624</sys_scope>
+        <sys_update_name>sys_app_module_3ecd131f2fddb110e56b41e72799b6b6</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2023-09-21 06:04:17</sys_updated_on>
+        <timeline_page/>
+        <title>Vehicle Servicings</title>
+        <uncancelable>false</uncancelable>
+        <view_name/>
+        <window_name/>
+    </sys_app_module>
+</record_update>
